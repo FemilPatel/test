@@ -52,7 +52,7 @@ const Other = () => {
         return r;
       }, {})
     );
-    console.log("res", result);
+
     setNewData(result);
   }, [users]);
 
