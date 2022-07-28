@@ -1,28 +1,52 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import moment from "moment";
 
 const AddUser = () => {
   let history = useNavigate();
+  const [Imgs, setImgs] = useState(null);
   const [user, setUser] = useState({
+    id: Math.floor(Math.random() * 100000),
     name: "",
+    dob: "",
     username: "",
     email: "",
     phone: "",
     website: "",
     gender: "",
     country: "",
+    // image: "",
   });
 
-  const { name, username, email, phone, website, gender, country } = user;
+  const { name, dob, username, email, phone, website, gender, country } = user;
+
+  const calAge = (dob) => {
+    var today = new Date();
+    var birthDate = new Date(dob);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  };
+
   const onInputChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+    let age = calAge(dob);
+    setUser({ ...user, [e.target.name]: e.target.value, age: age });
+  };
+  const uploadImage = (e) => {
+    let img = "";
+    img = e.target.files[0];
+    setUser({ ...user, image: img.name });
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
     await axios.post("http://localhost:3003/users", user);
     history("/");
   };
@@ -41,6 +65,17 @@ const AddUser = () => {
               onChange={onInputChange}
             />
           </div>
+          <div className='form-group'>
+            <input
+              type='text'
+              className='form-control form-control-lg'
+              placeholder='Enter Your Date of Birth'
+              name='dob'
+              value={dob}
+              onChange={onInputChange}
+            />
+          </div>
+
           <div className='form-group'>
             <input
               type='text'
@@ -127,6 +162,16 @@ const AddUser = () => {
                 Germany
               </option>
             </select>
+          </div>
+          <div className='form-group'>
+            <input
+              type='file'
+              className='form-control form-control-lg'
+              placeholder='upload'
+              name='image'
+              // value={imgs}
+              onChange={uploadImage}
+            />
           </div>
           <button className='btn btn-primary btn-block'>Add User</button>
         </form>

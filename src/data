@@ -3,11 +3,5 @@
 
 
 
-{2 setForDelete dataset attribute
-https://javascript.info/event-delegation
 
-{3merge all usestate into one 
-
-{1 1 compoenent for each functionality - crud}
-{crud - each route}
 {react lay suspense}

@@ -3,17 +3,35 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import UserStore from "../mobx/UserStore";
+import { inject, observer } from "mobx-react";
+import moment from "moment";
 
 const Home = () => {
   const [users, setUser] = useState([]);
+  const [filteredDataSource, setFilteredDataSource] = useState([]);
 
   useEffect(() => {
     loadUsers();
   }, []);
 
+  useEffect(() => {
+    let text = UserStore?.name;
+    const newData = users.filter(function (item) {
+      const itemData = item.name ? item.name.toUpperCase() : "".toUpperCase();
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    if (newData) {
+      setFilteredDataSource(newData);
+    }
+  }, [UserStore?.name]);
+
   const loadUsers = async () => {
     const result = await axios.get("http://localhost:3003/users");
     setUser(result.data);
+    setFilteredDataSource(result.data);
   };
 
   const deleteUser = async (id) => {
@@ -37,8 +55,8 @@ const Home = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => (
-              <tr>
+            {filteredDataSource.map((user, index) => (
+              <tr key={user.id}>
                 <th scope='row'>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.username}</td>
@@ -70,4 +88,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default inject("UserStore")(observer(Home));
+// export default Home;

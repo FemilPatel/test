@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import moment from "moment";
 
 const EditUser = () => {
   let history = useNavigate();
@@ -10,22 +11,46 @@ const EditUser = () => {
 
   const [user, setUser] = useState({
     name: "",
+    dob: "",
     username: "",
     email: "",
     phone: "",
     website: "",
     gender: "",
     country: "",
+    image: "",
   });
 
-  const { name, username, email, phone, website, gender, country } = user;
+  const { name, dob, username, email, phone, website, gender, country, image } =
+    user;
   const onInputChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+    let age = calAge(dob);
+
+    console.log("age", age);
+
+    setUser({ ...user, [e.target.name]: e.target.value, age: age });
+  };
+
+  const calAge = (dob) => {
+    var today = new Date();
+    var birthDate = new Date(dob);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+
+    return age;
   };
 
   useEffect(() => {
     loadUser();
   }, []);
+
+  const uploadImage = (e) => {
+    let img = e.target.files[0].name;
+    setUser({ ...user, image: img });
+  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +62,7 @@ const EditUser = () => {
     const result = await axios.get(`http://localhost:3003/users/${id}`);
     setUser(result.data);
   };
+
   return (
     <div className='container'>
       <div className='w-75 mx-auto shadow p-5'>
@@ -49,6 +75,16 @@ const EditUser = () => {
               placeholder='Enter Your Name'
               name='name'
               value={name}
+              onChange={onInputChange}
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              type='text'
+              className='form-control form-control-lg'
+              placeholder='Enter Your Date of Birth'
+              name='dob'
+              value={dob}
               onChange={onInputChange}
             />
           </div>
@@ -138,6 +174,16 @@ const EditUser = () => {
                 Germany
               </option>
             </select>
+          </div>
+          <div className='form-group'>
+            <input
+              type='file'
+              className='form-control form-control-lg'
+              placeholder='upload'
+              name='image'
+              // value={image}
+              onChange={uploadImage}
+            />
           </div>
           <button className='btn btn-warning btn-block'>Update User</button>
         </form>

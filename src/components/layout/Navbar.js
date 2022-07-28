@@ -1,17 +1,17 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, Outlet } from "react-router-dom";
-const Navbar = () => {
-  const [search, setsearch] = useState("");
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import { inject, observer } from "mobx-react";
+import UserStore from "../mobx/UserStore";
 
-  const searchChanged = (e) => {
-    // console.log("e", e.traget.value);
-    // setsearch({ search: e.traget.value });
-  };
+const Navbar = () => {
+  const [search, setsearch] = useState();
 
   useEffect(() => {
-    // console.log("text", search);
+    if (search !== undefined && search !== null) {
+      UserStore.setName(search);
+    }
   }, [search]);
 
   return (
@@ -61,9 +61,9 @@ const Navbar = () => {
             Add User
           </Link>
         </div>
-        <form className='d-flex' role='search'>
+        <div className='d-flex'>
           <input
-            className='form-control me-2'
+            className='form-control'
             type='search'
             placeholder='Search'
             aria-label='Search'
@@ -71,11 +71,12 @@ const Navbar = () => {
             value={search}
             onChange={(e) => setsearch(e.target.value)}
           />
-        </form>
+        </div>
       </nav>
       <Outlet />
     </>
   );
 };
 
-export default Navbar;
+// export default Navbar;
+export default inject("UserStore")(observer(Navbar));

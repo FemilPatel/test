@@ -1,159 +1,211 @@
 {
   "users": [
     {
-      "id": 2,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "address": {
-        "street": "Victor Plains",
-        "suite": "Suite 879",
-        "city": "Wisokyburgh",
-        "zipcode": "90566-7771",
-        "geo": {
-          "lat": "-43.9509",
-          "lng": "-34.4618"
-        }
-      },
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net",
-      "company": {
-        "name": "Deckow-Crist",
-        "catchPhrase": "Proactive didactic contingency",
-        "bs": "synergize scalable supply-chains"
-      },
-      "country": "America",
-      "gender": "Female"
+      "id": 39465,
+      "name": "Femil",
+      "username": "Femil Sabahaya",
+      "email": "femil123@gmil.com",
+      "phone": "9087865789",
+      "website": "femil1131232.com",
+      "gender": "Male",
+      "country": "India",
+      "image": "c7.png",
+      "dob": "1999/08/23",
+      "age": 22
     },
     {
-      "id": 4,
-      "name": "Patricia Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
-      "address": {
-        "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257",
-        "geo": {
-          "lat": "29.4572",
-          "lng": "-164.2990"
-        }
-      },
-      "phone": "493-170-9623 x156",
-      "website": "kale.biz",
-      "company": {
-        "name": "Robel-Corkery",
-        "catchPhrase": "Multi-tiered zero tolerance productivity",
-        "bs": "transition cutting-edge web services"
-      },
-      "country": "United Kindom",
-      "gender": "Male"
-    },
-    {
-      "id": 5,
-      "name": "Chelsey Dietrich",
-      "username": "Kamren",
-      "email": "Lucio_Hettinger@annie.ca",
-      "address": {
-        "street": "Skiles Walks",
-        "suite": "Suite 351",
-        "city": "Roscoeview",
-        "zipcode": "33263",
-        "geo": {
-          "lat": "-31.8129",
-          "lng": "62.5342"
-        }
-      },
-      "phone": "(254)954-1289",
-      "website": "demarco.info",
-      "company": {
-        "name": "Keebler LLC",
-        "catchPhrase": "User-centric fault-tolerant solution",
-        "bs": "revolutionize end-to-end systems"
-      },
-      "country": "America",
-      "gender": "Female"
-    },
-    {
-      "id": 6,
-      "name": "Mrs. Dennis Schulist",
-      "username": "Leopoldo_Corkery",
-      "email": "Karley_Dach@jasper.info",
-      "address": {
-        "street": "Norberto Crossing",
-        "suite": "Apt. 950",
-        "city": "South Christy",
-        "zipcode": "23505-1337",
-        "geo": {
-          "lat": "-71.4197",
-          "lng": "71.7478"
-        }
-      },
-      "phone": "1-477-935-8478 x6430",
-      "website": "ola.org",
-      "company": {
-        "name": "Considine-Lockman",
-        "catchPhrase": "Synchronised bottom-line interface",
-        "bs": "e-enable innovative applications"
-      },
-      "country": "America",
-      "gender": "Female"
-    },
-    {
-      "id": 7,
-      "name": "Kurtis Weissnat",
-      "username": "Elwyn.Skiles",
-      "email": "Telly.Hoeger@billy.biz",
-      "address": {
-        "street": "Rex Trail",
-        "suite": "Suite 280",
-        "city": "Howemouth",
-        "zipcode": "58804-1099",
-        "geo": {
-          "lat": "24.8918",
-          "lng": "21.8984"
-        }
-      },
-      "phone": "210.067.6132",
-      "website": "elvis.io",
-      "company": {
-        "name": "Johns Group",
-        "catchPhrase": "Configurable multimedia task-force",
-        "bs": "generate enterprise e-tailers"
-      },
-      "country": "Canada",
-      "gender": "Female"
-    },
-    {
+      "id": 47267,
       "name": "Gopal",
       "username": "Gopal Dobariya",
       "email": "Gopal123@gmil.com",
       "phone": "9087865789",
       "website": "Gopla1132.com",
-      "id": 10,
-      "country": "India",
-      "gender": "Male"
+      "gender": "Male",
+      "country": "America",
+      "image": "c5.png",
+      "dob": "1990/01/01",
+      "age": 32
     },
     {
-      "name": "Virag",
-      "username": "Borad",
-      "email": "Borad123@gmail.com",
+      "id": 22361,
+      "name": "Nikunj",
+      "username": "Nikunj Monpara ",
+      "email": "Nikunj123@gmil.com",
       "phone": "9726009509",
-      "website": "vairag1132.com",
-      "country": "India",
-      "id": 12,
-      "gender": "Male"
-    },
-    {
-      "name": "dharmik",
-      "username": "vora123@gmail.com",
-      "email": "dharmik123@gmil.com",
-      "phone": "9726009509",
-      "website": "voras1132.com",
+      "website": "Nikunj1132.com",
       "gender": "Male",
       "country": "India",
-      "id": 13
+      "dob": "1999/12/12",
+      "age": 22,
+      "image": "c5.png"
+    },
+    {
+      "id": 20967,
+      "name": "Virag",
+      "username": "borad123@gmail.com",
+      "email": "vairag123@gmil.com",
+      "phone": "9709990999",
+      "website": "vairag1132.com",
+      "gender": "Male",
+      "country": "India",
+      "dob": "1999/09/099",
+      "age": 22,
+      "image": "c7.png"
+    },
+    {
+      "id": 57056,
+      "name": "dharmik",
+      "username": "dharmikvora",
+      "email": "dharmik123@gmail.com",
+      "phone": "9087865789",
+      "website": "dharmik12223.com",
+      "gender": "Male",
+      "country": "India",
+      "dob": "2000/12/12",
+      "age": 21,
+      "image": "c5.png"
+    },
+    {
+      "id": 30494,
+      "name": "vaibhav",
+      "username": "vaibhav123",
+      "email": "vaibhav123@gmail.com",
+      "phone": "9709990999",
+      "website": "vaibhav1132.com",
+      "gender": "Male",
+      "country": "America",
+      "dob": "1999/08/12",
+      "age": 22
+    },
+    {
+      "id": 91654,
+      "name": "jonny",
+      "username": "jacksparrow",
+      "email": "jonny123@gmail.com",
+      "phone": "9788766666",
+      "website": "sparrow.com",
+      "gender": "Male",
+      "country": "Canada",
+      "image": "c5.png",
+      "dob": "1985/07/12",
+      "age": 37
+    },
+    {
+      "id": 68442,
+      "name": "selena",
+      "username": "gomez",
+      "email": "selena123@gmail.com",
+      "phone": "9726009509",
+      "website": "gomezwww.com",
+      "gender": "Female",
+      "country": "Canada",
+      "image": "c7.png",
+      "dob": "1968/08/12",
+      "age": 53
+    },
+    {
+      "id": 9102,
+      "name": "mitu",
+      "username": "Mrs.vekariya",
+      "email": "mitu999@gmail.com",
+      "phone": "9726009509",
+      "website": "mitu2p2.com",
+      "gender": "Female",
+      "country": "India",
+      "image": "c5.png",
+      "dob": "1965/09/12",
+      "age": 56
+    },
+    {
+      "id": 22354,
+      "name": "Walter",
+      "username": "Walter.",
+      "email": "Walter123@gmail.com",
+      "phone": "9726009509",
+      "website": "Walter.1132.com",
+      "gender": "Male",
+      "country": "Germany",
+      "image": "c7.png",
+      "dob": "2005/09/12",
+      "age": 16
+    },
+    {
+      "id": 87077,
+      "name": "joy",
+      "username": "joy123",
+      "email": "joy123@gmail.com",
+      "phone": "9726009509",
+      "website": "joy1132.com",
+      "gender": "Female",
+      "country": "America",
+      "image": "c7.png",
+      "dob": "2005/12/12",
+      "age": 16
+    },
+    {
+      "id": 8233,
+      "name": "jiniy",
+      "username": "jiniy10990",
+      "email": "jiniy099@gamil.com",
+      "phone": "9087865789",
+      "website": "jiniygerman.com",
+      "gender": "Female",
+      "country": "Germany",
+      "image": "c7.png",
+      "dob": "2009/10/13",
+      "age": 12
+    },
+    {
+      "id": 57466,
+      "name": "luis",
+      "username": "luis777",
+      "email": "luis007@gmail.com",
+      "phone": "9087865789",
+      "website": "luis0707.com",
+      "gender": "Male",
+      "country": "United Kindom",
+      "image": "c7.png",
+      "dob": "1999/10/23",
+      "age": 22
+    },
+    {
+      "id": 4416,
+      "name": "liza",
+      "dob": "1999/09/12",
+      "username": "lizawatt",
+      "email": "liza123@gmail.com",
+      "phone": "9788766666",
+      "website": "watt132.com",
+      "gender": "Female",
+      "country": "United Kindom",
+      "image": "c5.png",
+      "age": 22
+    },
+    {
+      "id": 53990,
+      "name": "liza waytt",
+      "dob": "1986/09/10",
+      "username": "luis777",
+      "email": "lizawaytt000@gmail.com",
+      "phone": "9788766666",
+      "website": "lizawaytt.com",
+      "gender": "Female",
+      "country": "United Kindom",
+      "age": 35,
+      "image": "c7.png"
+    },
+    {
+      "id": 20906,
+      "name": "roman",
+      "dob": "1999/09/13",
+      "username": "roman reigns",
+      "email": "roman09@gmail.com",
+      "phone": "9709990999",
+      "website": "roman@wwe.com",
+      "gender": "Male",
+      "country": "America",
+      "age": 22,
+      "image": "c5.png"
     }
   ]
 }
