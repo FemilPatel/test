@@ -41,7 +41,8 @@ const AddUser = () => {
   const uploadImage = (e) => {
     let img = "";
     img = e.target.files[0];
-    setUser({ ...user, image: img.name });
+    let newImg = URL.createObjectURL(img);
+    setUser({ ...user, image: newImg });
   };
 
   const onSubmit = async (e) => {

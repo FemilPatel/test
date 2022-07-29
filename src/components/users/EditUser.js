@@ -48,8 +48,10 @@ const EditUser = () => {
   }, []);
 
   const uploadImage = (e) => {
-    let img = e.target.files[0].name;
-    setUser({ ...user, image: img });
+    let img = "";
+    img = e.target.files[0];
+    let newImg = URL.createObjectURL(img);
+    setUser({ ...user, image: newImg });
   };
 
   const onSubmit = async (e) => {

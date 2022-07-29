@@ -192,7 +192,7 @@
       "gender": "Female",
       "country": "United Kindom",
       "age": 35,
-      "image": "c7.png"
+      "image": "blob:http://localhost:3000/1fb9e2a5-5510-4f9f-ab02-09bbf4284b15"
     },
     {
       "id": 20906,
@@ -205,7 +205,7 @@
       "gender": "Male",
       "country": "America",
       "age": 22,
-      "image": "c5.png"
+      "image": "blob:http://localhost:3000/00600b86-d16a-4f55-81b6-b91aa82a2605"
     }
   ]
 }
