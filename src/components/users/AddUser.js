@@ -38,11 +38,29 @@ const AddUser = () => {
     let age = calAge(dob);
     setUser({ ...user, [e.target.name]: e.target.value, age: age });
   };
-  const uploadImage = (e) => {
-    let img = "";
-    img = e.target.files[0];
-    let newImg = URL.createObjectURL(img);
-    setUser({ ...user, image: newImg });
+  const uploadImage = async (e) => {
+    let file = e.target.files[0];
+    let base64 = null;
+    var maxfilesize = 1024 * 1024;
+    if (file.size > maxfilesize) {
+      alert("File size is large");
+    } else {
+      base64 = await convertBase64(file);
+      setUser({ ...user, image: base64 });
+    }
+  };
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
   };
 
   const onSubmit = async (e) => {
