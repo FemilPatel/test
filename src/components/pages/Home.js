@@ -1,6 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect } from "react";
+
 import axios from "axios";
 import { Link } from "react-router-dom";
 import UserStore from "../mobx/UserStore";
@@ -9,11 +10,16 @@ import moment from "moment";
 
 const Home = () => {
   const [users, setUser] = useState([]);
+  const [visible, setVisible] = useState(10);
   const [filteredDataSource, setFilteredDataSource] = useState([]);
 
   useEffect(() => {
     loadUsers();
   }, []);
+
+  const showMoreDatas = () => {
+    setVisible((preV) => preV + 10);
+  };
 
   useEffect(() => {
     let text = UserStore?.name;
@@ -50,17 +56,20 @@ const Home = () => {
               <th scope='col'>Name</th>
               <th scope='col'>User Name</th>
               <th scope='col'>Email</th>
+              <th scope='col'>Web Site</th>
 
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {filteredDataSource.map((user, index) => (
+            {filteredDataSource.slice(0, visible).map((user, index) => (
               <tr key={user.id}>
                 <th scope='row'>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.username}</td>
                 <td>{user.email}</td>
+
+                <td>{user.website}</td>
 
                 <td>
                   <Link
@@ -83,6 +92,9 @@ const Home = () => {
             ))}
           </tbody>
         </table>
+        <button className='btn btn-outline-info' onClick={showMoreDatas}>
+          Load More...!!
+        </button>
       </div>
     </div>
   );

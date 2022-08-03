@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { inject, observer } from "mobx-react";
 import UserStore from "../mobx/UserStore";
@@ -52,6 +52,11 @@ const Navbar = () => {
               <li className='nav-item'>
                 <NavLink className='nav-link' to='other'>
                   Other
+                </NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink className='nav-link' to='map'>
+                  Map
                 </NavLink>
               </li>
             </ul>
