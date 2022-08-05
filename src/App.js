@@ -17,6 +17,7 @@ import User from "./components/users/User";
 import Other from "./components/pages/Other";
 import Map from "./components/pages/Map";
 import NotFound from "./components/pages/NotFound";
+import Login from "./components/pages/Login";
 
 const HomeComponent = React.lazy(() => import("./components/pages/Home"));
 const AboutComponent = React.lazy(() => import("./components/pages/About"));
@@ -30,6 +31,7 @@ function App(props) {
         <Suspense fallback={<div>Loading....</div>}>
           <Routes>
             <Route path='/' element={<HomeComponent />} />
+            <Route path='login' element={<Login />} />
             <Route path='about' element={<AboutComponent />} />
             <Route path='contact' element={<Contact />} />
             <Route path='users/add' element={<AddUser />} />

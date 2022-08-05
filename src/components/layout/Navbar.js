@@ -77,6 +77,10 @@ const Navbar = () => {
             onChange={(e) => setsearch(e.target.value)}
           />
         </div>
+
+        <Link className='btn btn-primary ml-2' to='login'>
+          Login
+        </Link>
       </nav>
       <Outlet />
     </>

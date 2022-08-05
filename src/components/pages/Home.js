@@ -73,7 +73,7 @@ const Home = () => {
 
                 <td>
                   <Link
-                    className='btn btn-primary mr-2'
+                    className='btn btn-warning mr-2'
                     to={`/users/${user.id}`}>
                     View
                   </Link>

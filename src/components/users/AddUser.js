@@ -51,6 +51,7 @@ const AddUser = () => {
   };
 
   const onInputChange = (e) => {
+    console.log("e", e);
     let age = calAge(dob);
     setUser({ ...user, [e.target.name]: e.target.value, age: age });
   };
